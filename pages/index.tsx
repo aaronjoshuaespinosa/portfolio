@@ -51,7 +51,7 @@ export default function Home() {
               <h1 className='text-secondary font-bold text-[2rem] md:text-[3rem] lg:text-[4rem] leading-[2.5rem] md:leading-[3rem] lg:leading-[4rem]'>I am <span>a Developer.</span></h1>
             </div>
             <p className='text-secondary text-[0.9rem] lg:text-[1rem]'>I am a Frontend Web Developer and a Graphic Artist that loves his work. Currently, I am a 3rd Year Computer Science Student at Cavite State University - Don Severino Delas Alas Campus. Right now I am focused on learning more about web development using <Link href="https://nextjs.org/" target="blank"><span className='text-accent hover:underline'>NextJS</span></Link> and <Link href="https://tailwindcss.com/" target="blank"><span className='text-accent hover:underline'>Tailwind CSS</span></Link> and on improving my skills and creativity.</p>
-            <button className='w-fit text-accent border-[1px] border-accent rounded-[4px] text-[0.9rem] lg:text-[1rem] py-[1rem] px-[2rem] mt-[2rem] hover:bg-accent/10 transition-all ease-in-out duration-[0.2]'>Contact Me!</button>
+            <Link href="mailto:aaronjoshua.espinosa@yahoo.com"><button className='w-fit text-accent border-[1px] border-accent rounded-[4px] text-[0.9rem] lg:text-[1rem] py-[1rem] px-[2rem] mt-[2rem] hover:bg-accent/10 transition-all ease-in-out duration-[0.2]'>Contact Me!</button></Link>
           </div>
 
           <div className='hidden md:flex w-[50%] relative items-center justify-center'>
