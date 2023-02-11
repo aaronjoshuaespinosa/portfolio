@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import { motion } from 'framer-motion';
-import { TbBrandGithub, TbBrandBehance, TbBrandLinkedin, TbBrandInstagram, TbBrandFacebook } from "react-icons/tb";
+import { TbBrandGithub, TbBrandBehance, TbBrandDribbble, TbBrandLinkedin, TbBrandInstagram, TbBrandFacebook } from "react-icons/tb";
 
 export default function Home() {
   return (
@@ -27,6 +27,10 @@ export default function Home() {
 
           <Link href="https://www.behance.net/aaronjoshuaespinosa" target="blank">
             <motion.p whileHover={{ y: -3, color: "#7B03FC" }} transition={{ duration: 0.2 }} className='cursor-pointer'><TbBrandBehance /></motion.p>
+          </Link>
+
+          <Link href="https://dribbble.com/aaronjoshuaespinosa" target="blank">
+            <motion.p whileHover={{ y: -3, color: "#7B03FC" }} transition={{ duration: 0.2 }} className='cursor-pointer'><TbBrandDribbble /></motion.p>
           </Link>
 
           <Link href="https://www.linkedin.com/in/aaronjoshuaespinosa/" target="blank">
