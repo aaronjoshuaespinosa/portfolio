@@ -8,8 +8,8 @@ export default function Home() {
         <title>AJ Espinosa</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        <p>Hello</p>
+      <main className='w-full h-screen flex items-center justify-center bg-dark text-light font-space'>
+        <p>Hello World</p>
       </main>
     </>
   )
