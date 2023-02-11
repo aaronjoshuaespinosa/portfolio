@@ -14,7 +14,7 @@ module.exports = {
         'space': ['Space Grotesk'],
       },
       colors: {
-        dark: "#0E041A",
+        dark: "#090311",
         primary: "#F1F5F9",
         secondary: "#82798C",
         accent: "#7B03FC",
