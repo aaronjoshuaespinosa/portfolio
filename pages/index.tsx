@@ -91,7 +91,7 @@ export default function Home() {
         {/* INFORMATION ABOUT ME */}
         <section className='flex flex-row justify-center items-center w-full px-[3.5rem] md:px-[4.5rem] lg:px-[7rem] lg:max-w-[100rem]'>
 
-          <div className='w-full md:w-[50%] flex flex-col gap-y-[1.5rem]'>
+          <div className='w-full md:w-[50%] flex flex-col items-center md:items-start gap-y-[1.5rem] text-center md:text-left'>
             {/* TITLE */}
             <p className='text-accent text-[0.9rem] lg:text-[1rem]'>Hello, my name is</p>
 
@@ -105,7 +105,7 @@ export default function Home() {
             <p className='text-secondary text-[0.9rem] lg:text-[1rem] mb-[2rem]'>A Frontend Web Developer and a Graphic Artist that loves his work. Currently, a 3rd Year Computer Science Student at Cavite State University - Don Severino Delas Alas Campus. Right now focused on learning more about web development using <Link href="https://nextjs.org/" target="blank"><span className='text-accent hover:underline'>NextJS</span></Link> and <Link href="https://tailwindcss.com/" target="blank"><span className='text-accent hover:underline'>Tailwind CSS</span></Link> and on improving my skills and creativity.</p>
 
             {/* BUTTON */}
-            <Link href="mailto:aaronjoshua.espinosa@yahoo.com" className='w-fit'><button className='w-fit text-accent border-[1px] border-accent rounded-[4px] text-[0.9rem] lg:text-[1rem] py-[1rem] px-[2rem] hover:bg-accent/10 transition-all ease-in-out duration-[0.2]'>Contact Me!</button></Link>
+            <Link href="mailto:aaronjoshua.espinosa@yahoo.com" className='w-fit'><p className='text-accent border-[1px] border-accent rounded-[4px] text-[0.9rem] lg:text-[1rem] text-center md:text-left py-[1rem] px-[2rem] hover:bg-accent/10 transition-all ease-in-out duration-[0.2]'>Contact Me!</p></Link>
           </div>
 
           {/* IMAGE */}
