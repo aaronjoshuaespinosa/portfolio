@@ -50,11 +50,12 @@ export default function Home() {
       <Head>
         <title>AJ Espinosa</title>
         <link rel="icon" href="/favicon.ico" />
-        <meta property="og:image" content="http://www.coachesneedsocial.com/wp-content/uploads/2014/12/BannerWCircleImages-1.jpg" />
-        <meta property="og:description" content="Coaches share their secrets to success so you can rock 2015. Join us for this inspiring, rejuvenating, motivating look at what secret sauce these coaches use to succeed in their business. This is for coaches of any level that are committed to changing the world. You will be elevated both in your life and your coaching business. Check out the topics below, there is something for everyone." />
-        <meta property="og:url" content="http://www.coachesneedsocial.com/coacheswisdomtelesummit/" />
-        <meta property="og:title" content="Coaches Wisdom Telesummit" />
+        <meta property="og:image" content="https://ik.imagekit.io/xzgmktvzg/meta_image?ik-sdk-version=javascript-1.4.3&updatedAt=1676191559972" />
+        <meta property="og:description" content="A Frontend Web Developer and a Graphic Artist that loves his work. Currently, a 3rd Year Computer Science Student at Cavite State University - Don Severino Delas Alas Campus. Right now focused on learning more about web development using NextJS and Tailwind CSS and on improving my skills and creativity." />
+        <meta property="og:url" content="https://ajespinosa.vercel.app/" />
+        <meta property="og:title" content="AJ Espinosa" />
       </Head>
+      
       <main className='w-full h-screen flex items-center justify-center bg-dark text-light font-space relative'>
         {/* NAV BAR */}
         <nav className='fixed top-0 flex flex-row justify-between items-center w-full py-[2rem] px-[3.5rem] md:px-[4.5rem] lg:px-[7rem] lg:max-w-[100rem]'>
