@@ -50,10 +50,11 @@ export default function Home() {
       <Head>
         <title>AJ Espinosa</title>
         <link rel="icon" href="/favicon.ico" />
-        <meta name="og:image" content="https://ik.imagekit.io/xzgmktvzg/meta_image?ik-sdk-version=javascript-1.4.3&updatedAt=1676191559972" />
-        <meta name="og:description" content="A Frontend Web Developer and a Graphic Artist that loves his work. Currently, a 3rd Year Computer Science Student at Cavite State University - Don Severino Delas Alas Campus. Right now focused on learning more about web development using NextJS and Tailwind CSS and on improving my skills and creativity." />
-        <meta name="og:url" content="https://ajespinosa.vercel.app/" />
-        <meta name="og:title" content="AJ Espinosa" />
+        <meta property="og:image" content="https://ik.imagekit.io/xzgmktvzg/meta_image?ik-sdk-version=javascript-1.4.3&updatedAt=1676191559972" />
+        <meta property="og:description" content="A Frontend Web Developer and a Graphic Artist that loves his work. Currently, a 3rd Year Computer Science Student at Cavite State University - Don Severino Delas Alas Campus. Right now focused on learning more about web development using NextJS and Tailwind CSS and on improving my skills and creativity." />
+        <meta property="og:url" content="https://ajespinosa.vercel.app/" />
+        <meta property="og:title" content="AJ Espinosa" />
+        <meta property="og:type" content="website" />
       </Head>
 
       <main className='w-full h-screen flex items-center justify-center bg-dark text-light font-space relative'>
