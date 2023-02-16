@@ -7,8 +7,8 @@ export default function Home() {
 
   const links = [
     {
-      link: "#",
-      text: "Me",
+      link: "#about",
+      text: "About",
     },
     {
       link: "#",
@@ -61,19 +61,19 @@ export default function Home() {
 
       <main className='w-full h-screen flex items-center justify-center bg-dark text-light font-space relative overflow-hidden'>
         {/* NAV BAR */}
-        <nav className='fixed top-0 flex flex-row justify-between items-center w-full py-[2rem] px-[3.5rem] md:px-[4.5rem] lg:px-[7rem] lg:max-w-[100rem]'>
+        <nav className='fixed bg-dark/90 backdrop-blur-sm top-0 flex flex-row justify-between items-center w-full py-[1.5rem] px-[3.5rem] md:px-[4.5rem] lg:px-[7rem] lg:max-w-[100rem] z-50'>
           <motion.img initial={{ rotate: -540, scale: 0, opacity: 0 }} animate={{ rotate: 0, scale: 1, opacity: 1, transition: { duration: 1 } }} className='h-[1.5rem]' src="https://ik.imagekit.io/xzgmktvzg/ajlogo?ik-sdk-version=javascript-1.4.3&updatedAt=1676132015789" />
 
           {/* NAV LINKS */}
-          <div className='hidden flex-row gap-x-[1.5rem] text-accent text-[0.875] font-bold hover:text-accent'>
+          <div className='flex flex-row gap-x-[4rem] text-primary text-[0.875rem]'>
             {links.map((link, i) => (
-              <Link href={link.link}><p>nav.<span className='text-primary'>{link.text}</span></p></Link>
+              <Link href={link.link}><p className='hover:text-accent'>{link.text}</p></Link>
             ))}
           </div>
         </nav>
 
         {/* LINKS */}
-        <div className='flex flex-col text-[1.5rem] text-primary gap-y-[1.5rem] items-center absolute bottom-0 left-0 pl-[1rem] md:pl-[1.5rem] lg:pl-[3rem]'>
+        <div className='flex flex-col text-[1.5rem] text-primary gap-y-[1.5rem] items-center fixed bottom-0 left-0 pl-[1rem] md:pl-[1.5rem] lg:pl-[3rem] z-40'>
           {icons.map((icon, i) => (
             <Link href={icon.link} target="blank">
               <motion.p initial={{ x: "-100%", opacity: 0 }} animate={{ x: 0, opacity: 1, transition: { duration: 0.5, delay: i * 0.2 + 1 } }} whileHover={{ y: -3, color: "#7B03FC" }} transition={{ duration: 0.2 }} className='cursor-pointer'>{icon.icon}</motion.p>
@@ -82,7 +82,7 @@ export default function Home() {
           <motion.div initial={{ x: "-1500%", opacity: 0 }} animate={{ x: 0, opacity: 1, transition: { duration: 0.5, delay: 6 * 0.2 + 1 } }} className='w-[1px] h-[5rem] bg-primary' />
         </div>
 
-        <div className='flex flex-col text-[1.5rem] text-primary gap-y-[1.5rem] items-center justify-center absolute bottom-0 right-0 pr-[1rem] md:pr-[1.5rem] lg:pr-[3rem]'>
+        <div className='flex flex-col text-[1.5rem] text-primary gap-y-[1.5rem] items-center justify-center fixed bottom-0 right-0 pr-[1rem] md:pr-[1.5rem] lg:pr-[3rem] z-40'>
           {/* EMAIL */}
           <Link href="mailto:aaronjoshua.espinosa@yahoo.com" target="blank">
             <motion.p initial={{ x: "100%", opacity: 0 }} animate={{ x: 0, opacity: 1, transition: { duration: 0.5, delay: 2 } }} whileHover={{ y: -3, color: "#7B03FC" }} transition={{ duration: 0.2 }} className='cursor-pointer text-vertical text-[0.875rem] leading-[1rem] tracking-[0.05rem]'>aaronjoshua.espinosa@yahoo.com</motion.p>
@@ -104,7 +104,7 @@ export default function Home() {
             </div>
 
             {/* DESCRIPTION */}
-            <motion.p initial={{ x: "-100%", opacity: 0 }} animate={{ x: 0, opacity: 1, transition: { duration: 0.5, delay: 3 * 0.2 } }} className='text-secondary text-[0.9rem] lg:text-[1rem] mb-[2rem]'>A Frontend Web Developer and a Graphic Artist that loves his work. Currently, a 3rd Year Computer Science Student at Cavite State University - Don Severino Delas Alas Campus. Right now focused on learning more about web development using <Link href="https://nextjs.org/" target="blank"><span className='text-accent hover:underline'>NextJS</span></Link> and <Link href="https://tailwindcss.com/" target="blank"><span className='text-accent hover:underline'>Tailwind CSS</span></Link> and on improving my skills and creativity.</motion.p>
+            <motion.p initial={{ x: "-100%", opacity: 0 }} animate={{ x: 0, opacity: 1, transition: { duration: 0.5, delay: 3 * 0.2 } }} className='text-secondary text-[0.9rem] lg:text-[1rem] mb-[2rem]'>A Frontend Web Developer and a Graphic Artist that loves his work. Currently, a 3rd Year Computer Science Student at Cavite State University - Don Severino Delas Alas Campus. Right now focused on learning more about web development using <Link href="https://nextjs.org/" target="blank"><span className='text-accent font-bold hover:underline'>NextJS</span></Link> and <Link href="https://tailwindcss.com/" target="blank"><span className='text-accent font-bold hover:underline'>Tailwind CSS</span></Link> and on improving my skills and creativity.</motion.p>
 
             {/* BUTTON */}
             <Link href="mailto:aaronjoshua.espinosa@yahoo.com" className='w-fit'><motion.p initial={{ x: "-100%", opacity: 0 }} animate={{ x: 0, opacity: 1, transition: { duration: 0.5, delay: 4 * 0.2 } }} className='text-accent border-[1px] border-accent rounded-[4px] text-[0.9rem] lg:text-[1rem] text-center md:text-left py-[1rem] px-[2rem] hover:bg-accent/10'>Contact Me!</motion.p></Link>
@@ -117,7 +117,14 @@ export default function Home() {
           </motion.div>
 
         </section>
+
       </main>
+
+      {/* ABOUT SECTION */}
+      <section className='w-full h-screen flex items-center justify-center bg-dark text-light font-space relative overflow-hidden'>
+        <div>
+        </div>
+      </section>
     </>
   )
 }
