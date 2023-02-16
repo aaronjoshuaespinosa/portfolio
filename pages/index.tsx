@@ -12,7 +12,7 @@ export default function Home() {
       text: "About",
     },
     {
-      link: "#",
+      link: "#projects",
       text: "Projects",
     },
     {
@@ -122,7 +122,7 @@ export default function Home() {
       </main>
 
       {/* ABOUT SECTION */}
-      <section className='w-full h-auto flex items-center justify-center bg-dark text-primary font-space relative overflow-hidden py-[10rem]'>
+      <section id='about' className='w-full h-auto flex items-center justify-center bg-dark text-primary font-space relative overflow-hidden py-[10rem]'>
         <div className='h-full flex flex-col gap-y-[1rem] justify-center items-center w-full px-[3.5rem] md:px-[4.5rem] lg:px-[7rem] lg:max-w-[100rem]'>
 
           {/* SECTION TITLE */}
@@ -179,7 +179,7 @@ export default function Home() {
       </section>
 
       {/* PROJECTS SECTION */}
-      <section className='w-full h-auto flex items-center justify-center bg-dark text-primary font-space relative overflow-hidden py-[10rem]'>
+      <section id='projects' className='w-full h-auto flex items-center justify-center bg-dark text-primary font-space relative overflow-hidden py-[10rem]'>
         <div className='h-full flex flex-col gap-y-[1.5rem] justify-center items-center w-full px-[3.5rem] md:px-[4.5rem] lg:px-[7rem] lg:max-w-[100rem]'>
 
           {/* SECTION TITLE */}
@@ -191,7 +191,7 @@ export default function Home() {
           {/* SECTION DETAILS */}
           <div className='flex flex-col items-center gap-y-[1.5rem] w-full'>
             {/* WINGMAN */}
-            <div className='flex flex-col gap-y-[0.75rem] p-[2rem] bg-secondary/10 rounded-[7px]'>
+            <div className='flex flex-col gap-y-[0.75rem] p-[2rem] bg-secondary/10 rounded-[7px] w-full'>
               <p>LATEST PROJECT</p>
               <div className='flex flex-row gap-x-[1.5rem]'>
 
@@ -204,7 +204,7 @@ export default function Home() {
                       <p className='text-primary text-xl font-bold'>2023</p>
                     </div>
                   </div>
-                  <p className='text-justify text-secondary'>I am a Frontend Web Developer and a Graphics Artist that loves his work. Currently, I am a 3rd Year Computer Science Student at Cavite State University - Don Severino Delas Alas Campus. Right now I am focused on learning more about web development using NextJS and Tailwind CSS and on improving my skills and creativity.</p>
+                  <p className='text-justify text-secondary'>An Online Assistant Platform for CEIT Students at Cavite State University - Don Severino Delas Alas Campus. This is a baby thesis project for one of our subjects. This website is done in collaboration with one of my groupmates. I did most of the frontend side of the website, and some adjustments in the backend.</p>
                 </div>
 
                 {/* PROJECT IMAGE */}
@@ -244,7 +244,7 @@ export default function Home() {
                       <p className='text-primary text-xl font-bold'>2023</p>
                     </div>
                   </div>
-                  <p className='text-justify text-secondary'>I am a Frontend Web Developer and a Graphics Artist that loves his work. Currently, I am a 3rd Year Computer Science Student at Cavite State University - Don Severino Delas Alas Campus. Right now I am focused on learning more about web development using NextJS and Tailwind CSS and on improving my skills and creativity.</p>
+                  <p className='text-justify text-secondary'>A social media type website where you create a deck and fill it with cards. Decks are like albums that you can name and categorize anything. Cards are like posts that can contain images or texts that the user wants to post. In this project I want to practice my frontend skills and to learn more about backend development.</p>
                 </div>
 
                 {/* PROJECT IMAGE */}
