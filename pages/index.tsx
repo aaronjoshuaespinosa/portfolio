@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import { motion } from 'framer-motion';
-import { TbBrandGithub, TbBrandBehance, TbBrandDribbble, TbBrandLinkedin, TbBrandInstagram, TbBrandFacebook } from "react-icons/tb";
+import { TbBrandGithub, TbBrandBehance, TbBrandDribbble, TbBrandLinkedin, TbBrandInstagram, TbBrandFacebook, TbBrandNextjs, TbBrandReactNative, TbBrandTailwind, TbBrandHtml5, TbBrandCss3, TbBrandJavascript, TbBrandSass, TbBrandGit, TbBrandFigma } from "react-icons/tb";
+import { HiArrowUpRight } from "react-icons/hi2";
 
 export default function Home() {
 
@@ -59,7 +60,7 @@ export default function Home() {
         <meta property="og:type" content="website" />
       </Head>
 
-      <main className='w-full h-screen flex items-center justify-center bg-dark text-light font-space relative overflow-hidden'>
+      <main className='w-full h-screen flex items-center justify-center bg-dark text-primary font-space relative overflow-hidden'>
         {/* NAV BAR */}
         <nav className='fixed bg-dark/90 backdrop-blur-sm top-0 flex flex-row justify-between items-center w-full py-[1.5rem] px-[3.5rem] md:px-[4.5rem] lg:px-[7rem] lg:max-w-[100rem] z-50'>
           <motion.img initial={{ rotate: -540, scale: 0, opacity: 0 }} animate={{ rotate: 0, scale: 1, opacity: 1, transition: { duration: 1 } }} className='h-[1.5rem]' src="https://ik.imagekit.io/xzgmktvzg/ajlogo?ik-sdk-version=javascript-1.4.3&updatedAt=1676132015789" />
@@ -121,8 +122,155 @@ export default function Home() {
       </main>
 
       {/* ABOUT SECTION */}
-      <section className='w-full h-screen flex items-center justify-center bg-dark text-light font-space relative overflow-hidden'>
-        <div>
+      <section className='w-full h-auto flex items-center justify-center bg-dark text-primary font-space relative overflow-hidden py-[10rem]'>
+        <div className='h-full flex flex-col gap-y-[1rem] justify-center items-center w-full px-[3.5rem] md:px-[4.5rem] lg:px-[7rem] lg:max-w-[100rem]'>
+
+          {/* SECTION TITLE */}
+          <div className='flex gap-x-[1.5rem] w-full items-center'>
+            <h1 className='font-bold text-4xl'>• About Me</h1>
+            <hr className='border-[1px] border-accent/50 w-[25rem]' />
+          </div>
+
+          {/* SECTION DETAILS */}
+          <div className='flex items-center gap-x-[4rem] h-full'>
+            <div className='flex flex-col gap-y-[1.5rem]'>
+              <p className='text-secondary text-justify'>I am a Frontend Web Developer and a Graphics Artist that loves his work. Currently, I am a 3rd Year Computer Science Student at Cavite State University - Don Severino Delas Alas Campus. Right now I am focused on learning more about web development using NextJS and Tailwind CSS and on improving my skills and creativity.</p>
+              <div className='flex gap-x-[10rem]'>
+                <div className='flex flex-col gap-y-[1rem]'>
+                  <h1 className='font-bold text-accent text-2xl'>Current Dev Stack</h1>
+                  <div className='flex gap-x-[12px] text-[2rem]'>
+                    <TbBrandNextjs />
+                    <TbBrandReactNative />
+                    <TbBrandTailwind />
+                  </div>
+                </div>
+
+                <div className='flex flex-col gap-y-[1rem]'>
+                  <h1 className='font-bold text-accent text-2xl'>Other Tools</h1>
+                  <div className='flex gap-x-[12px] text-[2rem]'>
+                    <TbBrandHtml5 />
+                    <TbBrandCss3 />
+                    <TbBrandJavascript />
+                    <TbBrandSass />
+                    <TbBrandGit />
+                    <TbBrandFigma />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className='h-[13rem] border-l-[1px] border-secondary' />
+
+            <div className='flex flex-col gap-y-[1rem]'>
+              <div className='flex flex-col items-center'>
+                <p className='font-bold text-accent text-6xl'>4+</p>
+                <p className='font-bold text-accent text-lg leading-[1.125rem]'>years</p>
+                <p className='whitespace-nowrap text-secondary pt-[0.5rem]'>Graphic & Web Design</p>
+              </div>
+
+              <div className='flex flex-col items-center'>
+                <p className='font-bold text-accent text-6xl leading-[4rem]'>3+</p>
+                <p className='font-bold text-accent text-lg leading-[1.125rem]'>years</p>
+                <p className='whitespace-nowrap text-secondary pt-[0.5rem]'>Web Development</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* PROJECTS SECTION */}
+      <section className='w-full h-auto flex items-center justify-center bg-dark text-primary font-space relative overflow-hidden py-[10rem]'>
+        <div className='h-full flex flex-col gap-y-[1.5rem] justify-center items-center w-full px-[3.5rem] md:px-[4.5rem] lg:px-[7rem] lg:max-w-[100rem]'>
+
+          {/* SECTION TITLE */}
+          <div className='flex gap-x-[1.5rem] w-full items-center'>
+            <h1 className='font-bold text-4xl'>• Projects</h1>
+            <hr className='border-[1px] border-accent/50 w-[25rem]' />
+          </div>
+
+          {/* SECTION DETAILS */}
+          <div className='flex flex-col items-center gap-y-[1.5rem] w-full'>
+            {/* WINGMAN */}
+            <div className='flex flex-col gap-y-[0.75rem] p-[2rem] bg-secondary/10 rounded-[7px]'>
+              <p>LATEST PROJECT</p>
+              <div className='flex flex-row gap-x-[1.5rem]'>
+
+                {/* PROJECT DETAILS */}
+                <div className='flex flex-col gap-y-[0.75rem]'>
+                  <div className='flex flex-row justify-between items-center'>
+                    <h1 className='text-4xl text-accent font-bold'>WingMan</h1>
+                    <div className='flex flex-col items-end'>
+                      <p className='text-secondary'>Year</p>
+                      <p className='text-primary text-xl font-bold'>2023</p>
+                    </div>
+                  </div>
+                  <p className='text-justify text-secondary'>I am a Frontend Web Developer and a Graphics Artist that loves his work. Currently, I am a 3rd Year Computer Science Student at Cavite State University - Don Severino Delas Alas Campus. Right now I am focused on learning more about web development using NextJS and Tailwind CSS and on improving my skills and creativity.</p>
+                </div>
+
+                {/* PROJECT IMAGE */}
+                <div className='bg-primary w-[25rem] h-[12rem] rounded-[7px] flex shrink-0'>
+                  <img src="" alt="" />
+                </div>
+              </div>
+
+              <div className='w-full flex justify-between'>
+                {/* PROJECT CATEGORIES */}
+                <div className='flex gap-x-[0.375rem]'>
+                  <p className='py-[0.375rem] px-[0.75rem] bg-primary text-dark w-fit font-bold rounded-full'>ReactJS</p>
+                  <p className='py-[0.375rem] px-[0.75rem] bg-primary text-dark w-fit font-bold rounded-full'>MongoDB</p>
+                  <p className='py-[0.375rem] px-[0.75rem] bg-primary text-dark w-fit font-bold rounded-full'>ExpressJS</p>
+                  <p className='py-[0.375rem] px-[0.75rem] bg-primary text-dark w-fit font-bold rounded-full'>NodeJS</p>
+                  <p className='py-[0.375rem] px-[0.75rem] bg-primary text-dark w-fit font-bold rounded-full'>Tailwind CSS</p>
+                </div>
+
+                <div className='flex justify-center items-center gap-x-[12px]'>
+                  <p className='flex gap-x-[6px] justify-center items-center border-primary border-[1px] rounded-[5px] py-[0.375rem] px-[0.75rem] hover:bg-primary hover:text-dark cursor-pointer'>Source Code <TbBrandGithub /></p>
+                  <p className='flex gap-x-[6px] justify-center items-center bg-accent rounded-[5px] py-[0.375rem] px-[0.75rem] hover:bg-accent/50 cursor-pointer'>Live View <HiArrowUpRight /></p>
+                </div>
+              </div>
+            </div>
+
+            {/* PROJECT C */}
+            <div className='flex flex-col gap-y-[0.75rem] p-[2rem] bg-secondary/10 rounded-[7px]'>
+              <p>ONGOING PROJECT</p>
+              <div className='flex flex-row gap-x-[1.5rem]'>
+
+                {/* PROJECT DETAILS */}
+                <div className='flex flex-col gap-y-[0.75rem]'>
+                  <div className='flex flex-row justify-between items-center'>
+                    <h1 className='text-4xl text-accent font-bold'>Project C</h1>
+                    <div className='flex flex-col items-end'>
+                      <p className='text-secondary'>Year</p>
+                      <p className='text-primary text-xl font-bold'>2023</p>
+                    </div>
+                  </div>
+                  <p className='text-justify text-secondary'>I am a Frontend Web Developer and a Graphics Artist that loves his work. Currently, I am a 3rd Year Computer Science Student at Cavite State University - Don Severino Delas Alas Campus. Right now I am focused on learning more about web development using NextJS and Tailwind CSS and on improving my skills and creativity.</p>
+                </div>
+
+                {/* PROJECT IMAGE */}
+                <div className='bg-primary w-[25rem] h-[12rem] rounded-[7px] flex shrink-0'>
+                  <img src="" alt="" />
+                </div>
+              </div>
+
+              <div className='w-full flex justify-between'>
+                {/* PROJECT CATEGORIES */}
+                <div className='flex gap-x-[0.375rem]'>
+                  <p className='py-[0.375rem] px-[0.75rem] bg-primary text-dark w-fit font-bold rounded-full'>NextJS</p>
+                  <p className='py-[0.375rem] px-[0.75rem] bg-primary text-dark w-fit font-bold rounded-full'>MongoDB</p>
+                  <p className='py-[0.375rem] px-[0.75rem] bg-primary text-dark w-fit font-bold rounded-full'>ExpressJS</p>
+                  <p className='py-[0.375rem] px-[0.75rem] bg-primary text-dark w-fit font-bold rounded-full'>NodeJS</p>
+                  <p className='py-[0.375rem] px-[0.75rem] bg-primary text-dark w-fit font-bold rounded-full'>Tailwind CSS</p>
+                </div>
+
+                <div className='flex justify-center items-center gap-x-[12px]'>
+                  <p className='flex gap-x-[6px] justify-center items-center border-primary border-[1px] rounded-[5px] py-[0.375rem] px-[0.75rem]'>Source Code <TbBrandGithub /></p>
+                  {/* <p className='flex gap-x-[6px] justify-center items-center bg-accent rounded-[5px] py-[0.375rem] px-[0.75rem]'>Live View <HiArrowUpRight /></p> */}
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
       </section>
     </>
