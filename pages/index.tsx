@@ -74,7 +74,7 @@ export default function Home() {
         </nav>
 
         {/* LINKS */}
-        <div className='flex flex-col text-[1.5rem] text-primary gap-y-[1.5rem] items-center fixed bottom-0 left-0 pl-[1rem] md:pl-[1.5rem] lg:pl-[3rem] z-40'>
+        <div className='flex flex-col text-[1.5rem] text-primary gap-y-[1.5rem] items-center fixed bottom-0 left-0 pl-[1rem] md:pl-[1.5rem] lg:pl-[3rem] z-50'>
           {icons.map((icon, i) => (
             <Link href={icon.link} target="blank">
               <motion.p initial={{ x: "-100%", opacity: 0 }} animate={{ x: 0, opacity: 1, transition: { duration: 0.5, delay: i * 0.2 + 1 } }} whileHover={{ y: -3, color: "#7B03FC" }} transition={{ duration: 0.2 }} className='cursor-pointer'>{icon.icon}</motion.p>
@@ -83,7 +83,7 @@ export default function Home() {
           <motion.div initial={{ x: "-1500%", opacity: 0 }} animate={{ x: 0, opacity: 1, transition: { duration: 0.5, delay: 6 * 0.2 + 1 } }} className='w-[1px] h-[5rem] bg-primary' />
         </div>
 
-        <div className='flex flex-col text-[1.5rem] text-primary gap-y-[1.5rem] items-center justify-center fixed bottom-0 right-0 pr-[1rem] md:pr-[1.5rem] lg:pr-[3rem] z-40'>
+        <div className='flex flex-col text-[1.5rem] text-primary gap-y-[1.5rem] items-center justify-center fixed bottom-0 right-0 pr-[1rem] md:pr-[1.5rem] lg:pr-[3rem] z-50'>
           {/* EMAIL */}
           <Link href="mailto:aaronjoshua.espinosa@yahoo.com" target="blank">
             <motion.p initial={{ x: "100%", opacity: 0 }} animate={{ x: 0, opacity: 1, transition: { duration: 0.5, delay: 2 } }} whileHover={{ y: -3, color: "#7B03FC" }} transition={{ duration: 0.2 }} className='cursor-pointer text-vertical text-[0.875rem] leading-[1rem] tracking-[0.05rem]'>aaronjoshua.espinosa@yahoo.com</motion.p>
