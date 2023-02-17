@@ -1,52 +1,12 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import { motion } from 'framer-motion';
-import { TbBrandGithub, TbBrandBehance, TbBrandDribbble, TbBrandLinkedin, TbBrandInstagram, TbBrandFacebook, TbBrandNextjs, TbBrandReactNative, TbBrandTailwind, TbBrandHtml5, TbBrandCss3, TbBrandJavascript, TbBrandSass, TbBrandGit, TbBrandFigma } from "react-icons/tb";
+import { icons, stacks } from '@/constants';
+import { NavBar } from '@/components';
+import { TbBrandGithub } from "react-icons/tb";
 import { HiArrowUpRight } from "react-icons/hi2";
 
 export default function Home() {
-
-  const links = [
-    {
-      link: "#about",
-      text: "About",
-    },
-    {
-      link: "#projects",
-      text: "Projects",
-    },
-    {
-      link: "#",
-      text: "Contact",
-    },
-  ]
-
-  const icons = [
-    {
-      link: "https://github.com/eyrooonnn",
-      icon: <TbBrandGithub />,
-    },
-    {
-      link: "https://www.behance.net/aaronjoshuaespinosa",
-      icon: <TbBrandBehance />,
-    },
-    {
-      link: "https://dribbble.com/aaronjoshuaespinosa",
-      icon: <TbBrandDribbble />,
-    },
-    {
-      link: "https://www.linkedin.com/in/aaronjoshuaespinosa/",
-      icon: <TbBrandLinkedin />,
-    },
-    {
-      link: "https://www.instagram.com/_eyrooonnn/",
-      icon: <TbBrandInstagram />,
-    },
-    {
-      link: "https://www.facebook.com/eyrooonnn/",
-      icon: <TbBrandFacebook />,
-    },
-  ]
 
   return (
     <>
@@ -62,22 +22,13 @@ export default function Home() {
 
       <main className='w-full h-screen flex items-center justify-center bg-dark text-primary font-space relative overflow-hidden'>
         {/* NAV BAR */}
-        <nav className='fixed bg-dark/90 backdrop-blur-sm top-0 flex flex-row justify-between items-center w-full py-[1.5rem] px-[3.5rem] md:px-[4.5rem] lg:px-[7rem] lg:max-w-[100rem] z-50'>
-          <motion.img initial={{ rotate: -540, scale: 0, opacity: 0 }} animate={{ rotate: 0, scale: 1, opacity: 1, transition: { duration: 1 } }} className='h-[1.5rem]' src="https://ik.imagekit.io/xzgmktvzg/ajlogo?ik-sdk-version=javascript-1.4.3&updatedAt=1676132015789" />
-
-          {/* NAV LINKS */}
-          <div className='flex flex-row gap-x-[4rem] text-primary text-[0.875rem]'>
-            {links.map((link, i) => (
-              <Link href={link.link}><p className='hover:text-accent'>{link.text}</p></Link>
-            ))}
-          </div>
-        </nav>
+        <NavBar />
 
         {/* LINKS */}
-        <div className='flex flex-col text-[1.5rem] text-primary gap-y-[1.5rem] items-center fixed bottom-0 left-0 pl-[1rem] md:pl-[1.5rem] lg:pl-[3rem] z-50'>
+        <div className='flex flex-col text-[1.5rem] gap-y-[1.5rem] items-center fixed bottom-0 left-0 pl-[1rem] md:pl-[1.5rem] lg:pl-[3rem] z-50'>
           {icons.map((icon, i) => (
             <Link href={icon.link} target="blank">
-              <motion.p initial={{ x: "-100%", opacity: 0 }} animate={{ x: 0, opacity: 1, transition: { duration: 0.5, delay: i * 0.2 + 1 } }} whileHover={{ y: -3, color: "#7B03FC" }} transition={{ duration: 0.2 }} className='cursor-pointer'>{icon.icon}</motion.p>
+              <motion.p key={i} title={icon.title} initial={{ x: "-100%", opacity: 0 }} animate={{ x: 0, opacity: 1, transition: { duration: 0.5, delay: i * 0.2 + 1 } }} whileHover={{ y: -3, color: "#7B03FC" }} transition={{ duration: 0.2 }} className='cursor-pointer'>{icon.icon}</motion.p>
             </Link>
           ))}
           <motion.div initial={{ x: "-1500%", opacity: 0 }} animate={{ x: 0, opacity: 1, transition: { duration: 0.5, delay: 6 * 0.2 + 1 } }} className='w-[1px] h-[5rem] bg-primary' />
@@ -136,26 +87,18 @@ export default function Home() {
             <div className='flex flex-col gap-y-[1.5rem]'>
               <p className='text-secondary text-justify'>I am a Frontend Web Developer and a Graphics Artist that loves his work. Currently, I am a 3rd Year Computer Science Student at Cavite State University - Don Severino Delas Alas Campus. Right now I am focused on learning more about web development using NextJS and Tailwind CSS and on improving my skills and creativity.</p>
               <div className='flex gap-x-[10rem]'>
-                <div className='flex flex-col gap-y-[1rem]'>
-                  <h1 className='font-bold text-accent text-2xl'>Current Dev Stack</h1>
-                  <div className='flex gap-x-[12px] text-[2rem]'>
-                    <TbBrandNextjs />
-                    <TbBrandReactNative />
-                    <TbBrandTailwind />
-                  </div>
-                </div>
 
-                <div className='flex flex-col gap-y-[1rem]'>
-                  <h1 className='font-bold text-accent text-2xl'>Other Tools</h1>
-                  <div className='flex gap-x-[12px] text-[2rem]'>
-                    <TbBrandHtml5 />
-                    <TbBrandCss3 />
-                    <TbBrandJavascript />
-                    <TbBrandSass />
-                    <TbBrandGit />
-                    <TbBrandFigma />
+                {stacks.map((stack, i) => (
+                  <div key={i} className='flex flex-col gap-y-[1rem]'>
+                    <h1 className='font-bold text-accent text-2xl'>{stack.title}</h1>
+                    <div className='flex gap-x-[12px] text-[2rem]'>
+                      {stack.icons.map((icon, i) => (
+                        <motion.p key={i} title={icon.title} whileHover={{ y: -3, color: `${icon.hoverColor}` }} transition={{ duration: 0.2 }}>{icon.ico}</motion.p>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                ))}
+
               </div>
             </div>
 
