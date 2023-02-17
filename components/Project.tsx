@@ -40,11 +40,11 @@ const Project = () => {
 
                         {/* PROJECT LINKS */}
                         <div className='flex justify-center items-center gap-x-[12px]'>
-                            <Link href={project.srcLink} target="_blank">
+                            <Link href={project.srcLink} target="_blank" style={`${project.srcLink}` === "#" ? { pointerEvents: "none", opacity: 0.3 } : {}}>
                                 <p className='flex gap-x-[6px] justify-center items-center border-primary border-[1px] rounded-[5px] py-[0.375rem] px-[0.75rem] hover:bg-primary hover:text-dark cursor-pointer'>Source Code <TbBrandGithub /></p>
                             </Link>
 
-                            <Link href={project.liveLink} target="_blank">
+                            <Link href={project.liveLink} target="_blank" style={`${project.liveLink}` === "#" ? { pointerEvents: "none", opacity: 0.3 } : {}}>
                                 <p className='flex gap-x-[6px] justify-center items-center bg-accent rounded-[5px] py-[0.375rem] px-[0.75rem] hover:bg-accent/50 cursor-pointer'>Live View <HiArrowUpRight /></p>
                             </Link>
                         </div>

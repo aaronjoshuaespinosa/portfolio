@@ -116,7 +116,7 @@ export const projects = [
         img: "",
         srcLink: "https://github.com/eyrooonnn/WingMan-App",
         liveLink: "https://wingman-web.vercel.app/",
-        desc: "An Online Assistant Platform for CEIT Students at Cavite State University - Don Severino Delas Alas Campus. This is a baby thesis project for one of our subjects. This website is done in collaboration with one of my groupmates. I did most of the frontend side of the website, and some adjustments in the backend.",
+        desc: "An Online Assistant Platform for CEIT Students at Cavite State University - Don Severino Delas Alas Campus. This is a preliminary thesis project for one of our courses. This website was created in collaboration with a member of my group. I created the majority of the website's frontend and made some backend changes.",
         tags: [
             "ReactJS",
             "Tailwind CSS",
@@ -132,7 +132,7 @@ export const projects = [
         img: "",
         srcLink: "#",
         liveLink: "#",
-        desc: "A social media type website where you create a deck and fill it with cards. Decks are like albums that you can name and categorize anything. Cards are like posts that can contain images or texts that the user wants to post. In this project I want to practice my frontend skills and to learn more about backend development.",
+        desc: "A social media-style website where you can build a deck and fill it with cards. Decks are similar to albums in that you can name and categorize anything on them. Cards are similar to posts in that they can contain images or text that the user wishes to post. This project will allow me to hone my frontend skills while also learning more about backend development.",
         tags: [
             "NextJS",
             "Tailwind CSS",
