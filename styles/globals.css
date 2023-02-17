@@ -4,6 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    --scroll-behavior: smooth !important;
+    scroll-behavior: smooth !important;
+}
+
 .text-vertical {
     writing-mode: vertical-rl;
     text-orientation: mixed;

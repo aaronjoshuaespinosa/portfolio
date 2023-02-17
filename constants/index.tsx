@@ -10,7 +10,7 @@ export const links = [
         text: "Projects",
     },
     {
-        link: "#",
+        link: "#contact",
         text: "Contact",
     },
 ]
