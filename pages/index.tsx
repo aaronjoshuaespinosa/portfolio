@@ -2,9 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { motion } from 'framer-motion';
 import { icons, stacks } from '@/constants';
-import { NavBar } from '@/components';
-import { TbBrandGithub } from "react-icons/tb";
-import { HiArrowUpRight } from "react-icons/hi2";
+import { NavBar, Project } from '@/components';
 
 export default function Home() {
 
@@ -28,7 +26,7 @@ export default function Home() {
         <div className='flex flex-col text-[1.5rem] gap-y-[1.5rem] items-center fixed bottom-0 left-0 pl-[1rem] md:pl-[1.5rem] lg:pl-[3rem] z-50'>
           {icons.map((icon, i) => (
             <Link href={icon.link} target="blank">
-              <motion.p key={i} title={icon.title} initial={{ x: "-100%", opacity: 0 }} animate={{ x: 0, opacity: 1, transition: { duration: 0.5, delay: i * 0.2 + 1 } }} whileHover={{ y: -3, color: "#7B03FC" }} transition={{ duration: 0.2 }} className='cursor-pointer'>{icon.icon}</motion.p>
+              <motion.p key={i} title={icon.title} initial={{ x: "-100%", opacity: 0 }} animate={{ x: 0, opacity: 1, transition: { duration: 0.5, delay: i * 0.2 + 1 } }} whileHover={{ y: -2, color: "#7B03FC" }} transition={{ duration: 0.2 }} className='cursor-pointer'>{icon.icon}</motion.p>
             </Link>
           ))}
           <motion.div initial={{ x: "-1500%", opacity: 0 }} animate={{ x: 0, opacity: 1, transition: { duration: 0.5, delay: 6 * 0.2 + 1 } }} className='w-[1px] h-[5rem] bg-primary' />
@@ -69,7 +67,6 @@ export default function Home() {
           </motion.div>
 
         </section>
-
       </main>
 
       {/* ABOUT SECTION */}
@@ -93,7 +90,7 @@ export default function Home() {
                     <h1 className='font-bold text-accent text-2xl'>{stack.title}</h1>
                     <div className='flex gap-x-[12px] text-[2rem]'>
                       {stack.icons.map((icon, i) => (
-                        <motion.p key={i} title={icon.title} whileHover={{ y: -3, color: `${icon.hoverColor}` }} transition={{ duration: 0.2 }}>{icon.ico}</motion.p>
+                        <motion.p key={i} title={icon.title} className="cursor-crosshair" whileHover={{ y: -3, color: `${icon.hoverColor}` }} transition={{ duration: 0.2 }}>{icon.ico}</motion.p>
                       ))}
                     </div>
                   </div>
@@ -133,86 +130,7 @@ export default function Home() {
 
           {/* SECTION DETAILS */}
           <div className='flex flex-col items-center gap-y-[1.5rem] w-full'>
-            {/* WINGMAN */}
-            <div className='flex flex-col gap-y-[0.75rem] p-[2rem] bg-secondary/10 rounded-[7px] w-full'>
-              <p>LATEST PROJECT</p>
-              <div className='flex flex-row gap-x-[1.5rem]'>
-
-                {/* PROJECT DETAILS */}
-                <div className='flex flex-col gap-y-[0.75rem]'>
-                  <div className='flex flex-row justify-between items-center'>
-                    <h1 className='text-4xl text-accent font-bold'>WingMan</h1>
-                    <div className='flex flex-col items-end'>
-                      <p className='text-secondary'>Year</p>
-                      <p className='text-primary text-xl font-bold'>2023</p>
-                    </div>
-                  </div>
-                  <p className='text-justify text-secondary'>An Online Assistant Platform for CEIT Students at Cavite State University - Don Severino Delas Alas Campus. This is a baby thesis project for one of our subjects. This website is done in collaboration with one of my groupmates. I did most of the frontend side of the website, and some adjustments in the backend.</p>
-                </div>
-
-                {/* PROJECT IMAGE */}
-                <div className='bg-primary w-[25rem] h-[12rem] rounded-[7px] flex shrink-0'>
-                  <img src="" alt="" />
-                </div>
-              </div>
-
-              <div className='w-full flex justify-between'>
-                {/* PROJECT CATEGORIES */}
-                <div className='flex gap-x-[0.375rem]'>
-                  <p className='py-[0.375rem] px-[0.75rem] bg-primary text-dark w-fit font-bold rounded-full'>ReactJS</p>
-                  <p className='py-[0.375rem] px-[0.75rem] bg-primary text-dark w-fit font-bold rounded-full'>MongoDB</p>
-                  <p className='py-[0.375rem] px-[0.75rem] bg-primary text-dark w-fit font-bold rounded-full'>ExpressJS</p>
-                  <p className='py-[0.375rem] px-[0.75rem] bg-primary text-dark w-fit font-bold rounded-full'>NodeJS</p>
-                  <p className='py-[0.375rem] px-[0.75rem] bg-primary text-dark w-fit font-bold rounded-full'>Tailwind CSS</p>
-                </div>
-
-                <div className='flex justify-center items-center gap-x-[12px]'>
-                  <p className='flex gap-x-[6px] justify-center items-center border-primary border-[1px] rounded-[5px] py-[0.375rem] px-[0.75rem] hover:bg-primary hover:text-dark cursor-pointer'>Source Code <TbBrandGithub /></p>
-                  <p className='flex gap-x-[6px] justify-center items-center bg-accent rounded-[5px] py-[0.375rem] px-[0.75rem] hover:bg-accent/50 cursor-pointer'>Live View <HiArrowUpRight /></p>
-                </div>
-              </div>
-            </div>
-
-            {/* PROJECT C */}
-            <div className='flex flex-col gap-y-[0.75rem] p-[2rem] bg-secondary/10 rounded-[7px]'>
-              <p>ONGOING PROJECT</p>
-              <div className='flex flex-row gap-x-[1.5rem]'>
-
-                {/* PROJECT DETAILS */}
-                <div className='flex flex-col gap-y-[0.75rem]'>
-                  <div className='flex flex-row justify-between items-center'>
-                    <h1 className='text-4xl text-accent font-bold'>Project C</h1>
-                    <div className='flex flex-col items-end'>
-                      <p className='text-secondary'>Year</p>
-                      <p className='text-primary text-xl font-bold'>2023</p>
-                    </div>
-                  </div>
-                  <p className='text-justify text-secondary'>A social media type website where you create a deck and fill it with cards. Decks are like albums that you can name and categorize anything. Cards are like posts that can contain images or texts that the user wants to post. In this project I want to practice my frontend skills and to learn more about backend development.</p>
-                </div>
-
-                {/* PROJECT IMAGE */}
-                <div className='bg-primary w-[25rem] h-[12rem] rounded-[7px] flex shrink-0'>
-                  <img src="" alt="" />
-                </div>
-              </div>
-
-              <div className='w-full flex justify-between'>
-                {/* PROJECT CATEGORIES */}
-                <div className='flex gap-x-[0.375rem]'>
-                  <p className='py-[0.375rem] px-[0.75rem] bg-primary text-dark w-fit font-bold rounded-full'>NextJS</p>
-                  <p className='py-[0.375rem] px-[0.75rem] bg-primary text-dark w-fit font-bold rounded-full'>MongoDB</p>
-                  <p className='py-[0.375rem] px-[0.75rem] bg-primary text-dark w-fit font-bold rounded-full'>ExpressJS</p>
-                  <p className='py-[0.375rem] px-[0.75rem] bg-primary text-dark w-fit font-bold rounded-full'>NodeJS</p>
-                  <p className='py-[0.375rem] px-[0.75rem] bg-primary text-dark w-fit font-bold rounded-full'>Tailwind CSS</p>
-                </div>
-
-                <div className='flex justify-center items-center gap-x-[12px]'>
-                  <p className='flex gap-x-[6px] justify-center items-center border-primary border-[1px] rounded-[5px] py-[0.375rem] px-[0.75rem]'>Source Code <TbBrandGithub /></p>
-                  {/* <p className='flex gap-x-[6px] justify-center items-center bg-accent rounded-[5px] py-[0.375rem] px-[0.75rem]'>Live View <HiArrowUpRight /></p> */}
-                </div>
-              </div>
-            </div>
-
+            <Project />
           </div>
         </div>
       </section>
