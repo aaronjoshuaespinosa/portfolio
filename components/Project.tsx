@@ -10,7 +10,7 @@ const Project = () => {
             {projects.map((project, i) => (
                 <div key={i} className='flex flex-col gap-y-[0.75rem] p-[2rem] bg-secondary/10 rounded-[7px] w-full'>
                     <p>{project.label}</p>
-                    <div className='flex flex-row gap-x-[1.5rem]'>
+                    <div className='flex flex-row gap-x-[1.5rem] w-full relative'>
 
                         {/* PROJECT DETAILS */}
                         <div className='flex flex-col gap-y-[0.75rem]'>
@@ -21,31 +21,35 @@ const Project = () => {
                                     <p className='text-primary text-xl font-bold'>{project.year}</p>
                                 </div>
                             </div>
-                            <p className='text-justify text-secondary'>{project.desc}</p>
+                            {/* PROJECT IMAGE */}
+                            <div className='bg-primary w-full h-[12rem] rounded-[7px] flex md:hidden'>
+                                <img src="" alt="" />
+                            </div>
+                            <p className='text-justify text-[0.9rem] lg:text-[1rem] text-secondary md:max-w-[50rem] lg:max-w-[160rem]'>{project.desc}</p>
                         </div>
 
                         {/* PROJECT IMAGE */}
-                        <div className='bg-primary w-[25rem] h-[12rem] rounded-[7px] flex shrink-0'>
+                        <div className='bg-primary h-[12rem] rounded-[7px] hidden md:flex w-full'>
                             <img src="" alt="" />
                         </div>
                     </div>
 
-                    <div className='w-full flex justify-between'>
+                    <div className='w-full flex flex-col md:flex-row justify-between items-start gap-y-[1rem] gap-x-[1rem]'>
                         {/* PROJECT CATEGORIES */}
-                        <div className='flex gap-x-[0.375rem]'>
+                        <div className='flex gap-x-[0.375rem] gap-y-[0.375rem] flex-wrap'>
                             {project.tags.map((tag, i) => (
-                                <p className='py-[0.375rem] px-[0.75rem] bg-primary text-dark w-fit font-bold rounded-full'>{tag}</p>
+                                <p className='py-[0.375rem] px-[0.75rem] bg-primary text-[0.9rem] lg:text-[1rem] text-dark w-fit whitespace-nowrap font-bold rounded-full basis-1'>{tag}</p>
                             ))}
                         </div>
 
                         {/* PROJECT LINKS */}
                         <div className='flex justify-center items-center gap-x-[12px]'>
                             <Link href={project.srcLink} target="_blank" style={`${project.srcLink}` === "#" ? { pointerEvents: "none", opacity: 0.3 } : {}}>
-                                <p className='flex gap-x-[6px] justify-center items-center border-primary border-[1px] rounded-[5px] py-[0.375rem] px-[0.75rem] hover:bg-primary hover:text-dark cursor-pointer'>Source Code <TbBrandGithub /></p>
+                                <p className='flex gap-x-[6px] text-[0.9rem] lg:text-[1rem] justify-center items-center border-primary border-[1px] rounded-[5px] py-[0.375rem] px-[0.75rem] hover:bg-primary hover:text-dark cursor-pointer whitespace-nowrap'>Source Code <TbBrandGithub /></p>
                             </Link>
 
                             <Link href={project.liveLink} target="_blank" style={`${project.liveLink}` === "#" ? { pointerEvents: "none", opacity: 0.3 } : {}}>
-                                <p className='flex gap-x-[6px] justify-center items-center bg-accent rounded-[5px] py-[0.375rem] px-[0.75rem] hover:bg-accent/50 cursor-pointer'>Live View <HiArrowUpRight /></p>
+                                <p className='flex gap-x-[6px] text-[0.9rem] lg:text-[1rem] justify-center items-center bg-accent rounded-[5px] py-[0.375rem] px-[0.75rem] hover:bg-accent/50 cursor-pointer whitespace-nowrap'>Live View <HiArrowUpRight /></p>
                             </Link>
                         </div>
                     </div>
