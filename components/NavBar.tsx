@@ -45,7 +45,7 @@ const NavBar = () => {
                         ))}
                     </div>
 
-                    <p className='text-accent text-2xl'><RxHamburgerMenu /></p>
+                    <p className='block md:hidden text-accent text-2xl'><RxHamburgerMenu /></p>
 
                     {/* NAV LINKS */}
                     <div className='hidden absolute right-0 bottom-0'>
