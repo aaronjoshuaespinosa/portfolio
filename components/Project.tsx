@@ -43,7 +43,7 @@ const Project = () => {
                         </div>
 
                         {/* PROJECT LINKS */}
-                        <div className='flex justify-center items-center gap-x-[12px]'>
+                        <div className='flex justify-between md:justify-center items-center gap-x-[12px] w-full md:w-auto'>
                             <Link href={project.srcLink} target="_blank" style={`${project.srcLink}` === "#" ? { pointerEvents: "none", opacity: 0.3 } : {}}>
                                 <p className='flex gap-x-[6px] text-[0.9rem] lg:text-[1rem] justify-center items-center border-primary border-[1px] rounded-[5px] py-[0.375rem] px-[0.75rem] hover:bg-primary hover:text-dark cursor-pointer whitespace-nowrap'>Source Code <TbBrandGithub /></p>
                             </Link>
