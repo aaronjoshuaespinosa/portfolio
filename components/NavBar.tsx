@@ -55,7 +55,7 @@ const NavBar = () => {
                 </nav>
             </div>
             {/* NAV LINKS */}
-            <div className='flex justify-center items-center fixed h-screen w-full z-50 backdrop-blur-sm transition-all ease-in-out duration-[0.5s]' style={showNav ? { transform: "translateX(0%)", opacity: 1 } : { transform: "translateX(100%)", opacity: 0 }}>
+            <div className='flex justify-center items-center fixed h-screen w-full z-50 backdrop-blur-sm transition-all ease-in-out duration-[0.3s]' style={showNav ? { transform: "translateX(0%)", opacity: 1 } : { transform: "translateX(100%)", opacity: 0 }}>
                 <p className='text-accent text-2xl absolute top-0 right-0 z-50 p-[1.5rem]' onClick={showNavBar}><RxCross1 /></p>
                 <div className='absolute flex right-0 flex-col gap-y-[4rem] text-primary text-[0.875rem] h-full w-[70%] justify-center items-center bg-dark'>
                     {links.map((link, i) => (
