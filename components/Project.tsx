@@ -23,7 +23,7 @@ const Project = () => {
                             </div>
                             {/* PROJECT IMAGE */}
                             <div className='bg-primary w-full h-[12rem] rounded-[7px] flex md:hidden'>
-                                <img src="" alt="" />
+                                <img src={project.img} alt="project" />
                             </div>
                             <p className='text-justify text-[0.9rem] lg:text-[1rem] text-secondary md:max-w-[50rem] lg:max-w-[160rem]'>{project.desc}</p>
                         </div>
