@@ -29,8 +29,8 @@ const Project = () => {
                         </div>
 
                         {/* PROJECT IMAGE */}
-                        <div className='bg-primary h-[12rem] rounded-[7px] hidden md:flex w-full'>
-                            <img src="" alt="" />
+                        <div className='bg-primary h-[12rem] rounded-[7px] hidden md:flex justify-center items-center w-full overflow-hidden'>
+                            <img src={project.img} alt="project" className='w-fit grayscale hover:grayscale-0 transition-all ease-in-out duration-[0.2s]' />
                         </div>
                     </div>
 
