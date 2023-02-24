@@ -17,7 +17,7 @@ export const links = [
 
 export const icons = [
     {
-        link: "https://github.com/eyrooonnn",
+        link: "https://github.com/aaronjoshuaespinosa",
         icon: <TbBrandGithub />,
         title: "Github",
     },
@@ -42,7 +42,7 @@ export const icons = [
         title: "Instagram",
     },
     {
-        link: "https://www.facebook.com/eyrooonnn/",
+        link: "https://www.facebook.com/aaronjoshua.espinosa/",
         icon: <TbBrandFacebook />,
         title: "Facebook",
     },
